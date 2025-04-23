@@ -4,7 +4,7 @@ This document provides a compact overview of what distinguishes production-ready
 
 ---
 
-### ✅ Production-Grade Code vs Non-Production: Practical Comparison
+### Production-Grade Code vs Non-Production: Practical Comparison
 
 | Area                     | Production-Readiness Checklist | Tools & Examples | Bad Practices |
 |--------------------------|-------------------------------|------------------|----------------|
@@ -17,4 +17,3 @@ This document provides a compact overview of what distinguishes production-ready
 | CI/CD & DevOps           | • Automated CI/CD<br>• Staging before prod<br>• Rollback/versioned releases | • GitHub Actions<br>• ArgoCD<br>• Jenkins | • Uploads files to server via SCP or FTP<br>• Manual deployment<br>• No rollback<br>• No staging |
 | User Experience & Fail-safes | • User-friendly errors<br>• Timeouts/retries<br>• Fallback pages<br>• Health checks | • FastAPI exception handlers<br>• /health endpoint | • Displays "Internal Server Error" with no context<br>• Crashes or vague errors<br>• No timeouts<br>• No health endpoints |
 | Documentation            | • Local + prod setup guides<br>• API docs<br>• Inline comments | • Swagger/OpenAPI<br>• Markdown<br>• docstrings | • Only has code comments like "# TODO fix this"<br>• No setup guide<br>• Undocumented endpoints<br>• Spaghetti code |
----
